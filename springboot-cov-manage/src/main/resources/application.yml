@@ -1,0 +1,34 @@
+server:           #配置端口
+  port: 8081
+
+
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: non_null
+  datasource:
+    username: root              #用户名
+    password: guofangxu020707   #用户密码
+    url: jdbc:mysql://localhost:3306/cov19_manage_sys?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.jdbc.Driver
+
+#shiro的配置
+shiro:
+  anon-urls:                  #放行页面
+    - /toLogin*
+    - /login.html*
+    - /login/login
+    - /login/getCode
+    - /css/**
+    - /echarts/**
+    - /images/**
+    - /layui/**
+    - /layui_ext/**
+    - /js/**
+  login-url: /index.html      #登入页面
+  log-out-url: /login/logout* #登出页面
+  authc-ulrs:                 #拦截页面
+    - /**
+
+#      &serverTimezone=GMT%2B8
