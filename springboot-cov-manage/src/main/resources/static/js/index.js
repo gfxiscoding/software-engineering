@@ -65,13 +65,6 @@ layui.use(['bodyTab','form','element','layer','jquery'],function(){
 	//通过顶部菜单获取左侧二三级菜单
 	getData("contentManagement");
 
-	// //手机设备的简单适配
-    // $('.site-tree-mobile').on('click', function(){
-	// 	$('body').addClass('site-mobile');
-	// });
-    // $('.site-mobile-shade').on('click', function(){
-	// 	$('body').removeClass('site-mobile');
-	// });
 
 	// 添加新窗口
 	$("body").on("click",".layui-nav .layui-nav-item a:not('.mobileTopLevelMenus .layui-nav-item a')",function(){
@@ -140,20 +133,6 @@ layui.use(['bodyTab','form','element','layer','jquery'],function(){
 function addTab(_this){
 	tab.tabAdd(_this);
 }
-
-// //捐赠弹窗
-// function donation(){
-// 	layer.tab({
-// 		area : ['260px', '367px'],
-// 		tab : [{
-// 			title : "微信",
-// 			content : "<div style='padding:30px;overflow:hidden;background:#d2d0d0;'><img src='images/wechat.jpg'></div>"
-// 		},{
-// 			title : "支付宝",
-// 			content : "<div style='padding:30px;overflow:hidden;background:#d2d0d0;'><img src='images/alipay.jpg'></div>"
-// 		}]
-// 	})
-// }
 
 //图片管理弹窗
 function showImg(){
