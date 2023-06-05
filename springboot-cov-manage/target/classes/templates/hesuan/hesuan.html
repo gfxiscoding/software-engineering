@@ -28,6 +28,7 @@
                             <option value='混检'>混检</option>
                             <option value='单检'>单检</option>
                         </select>
+                    </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">报告结果</label>
@@ -175,7 +176,7 @@
                 },
                 {fixed: 'right', title: '操作', toolbar: '#menuRowBar', align: 'center',width:'180'}
             ] ],
-            done: function (data, curr, count) {
+            done: function (data, curr) {
                 //不是第一页时，如果当前返回的数据为0那么就返回上一页
                 if (data.data.length == 0 && curr != 1) {
                     tableIns.reload({
